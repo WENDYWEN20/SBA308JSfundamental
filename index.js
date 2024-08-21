@@ -73,6 +73,22 @@ const CourseInfo = {
         submitted_at: "2023-03-07",
         score: 140
       }
+    },
+    {
+      learner_id: 182,
+      assignment_id: 2,
+      submission: {
+        submitted_at: "2023-03-07",
+        score: 120
+      }
+    },
+    {
+      learner_id: 182,
+      assignment_id: 3,
+      submission: {
+        submitted_at: "2023-03-07",
+        score: 135
+      }
     }
   ];
   
@@ -114,15 +130,25 @@ const CourseInfo = {
  // e.g. a learner with 50/100 on one assignment and 190/200 on another
  // would have a weighted average score of 240/300 = 80%.
  console.log(LearnerSubmissions)
-
-     const LeanerId = [];
+let LearnerId=[], LearnerIdAssignmentId=[], LearnerIdScore=[]
      for (let i = 0; i < LearnerSubmissions.length; i++) {
-       let LeanerId = LearnerSubmissions[i].learner_id;
-       console.log(LeanerId)
-       let LeanerIdAssignmentId = LearnerSubmissions[i].assignment_id;
-       console.log(LeanerIdAssignmentId)
+      LearnerId.push(LearnerSubmissions[i].learner_id)
+      LearnerIdAssignmentId.push(LearnerSubmissions[i].assignment_id)  
+      LearnerIdScore.push(LearnerSubmissions[i].submission.score)
     }
-  
+   console.log(LearnerId)
+   console.log(LearnerIdAssignmentId)
+   console.log(LearnerIdScore)
+    for (let j=0; j<LearnerSubmissions.length; j++){
+      if(LearnerId[j] !=LearnerId[j+1]){
+        console.log(j);console.log(LearnerId[j+1]);
+      };
+      continue
+    }
+    
+    console.log(LearnerId)
+    console.log(LearnerIdAssignmentId)
+    console.log(LearnerIdScore)
       
 // <assignment_id>: number,
 // if an assignment is not yet due, it should not be included in either
