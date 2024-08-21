@@ -115,6 +115,9 @@ const CourseInfo = {
   }
   validClass(AssignmentGroup.course_id, CourseInfo.id)
 
+
+//You should also account for potential errors in the data that your program receives. What if
+// points_possible is 0? You cannot divide by zero. What if a value that you are expecting to be a number isinstead a string?
   function validPoints(AssignmentGroupPoints){
 
     AssignmentGroup.assignments.forEach((AssignmentGroupPoints) => {console.log(AssignmentGroupPoints);
@@ -127,13 +130,6 @@ const CourseInfo = {
 
   validPoints(AssignmentGroup.assignments.points_possible)
 
-
-
-
-}
-  //You should also account for potential errors in the data that your program receives. What if
-// points_possible is 0? You cannot divide by zero. What if a value that you are expecting to be a number isinstead a string?
- 
 
 // //Assignment by id 
 //   const assignmentsById = {};
@@ -181,11 +177,10 @@ const CourseInfo = {
 //       learnerData[learner_id].assignments[assignment_id] = percentageScore;
 //     }
 
-//   // Create a mapping from learner ID to their submissions
 
-  // for (let i = 0; i < LearnerSubmissions.length; i++) {
-  //   const submission = LearnerSubmissions[i];
-  //   const { learner_id, assignment_id, submission: submissionData } = submission;
+}
+
  
 
-  // console.log(result);
+
+
